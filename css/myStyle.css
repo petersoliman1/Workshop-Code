@@ -1,0 +1,443 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e2e0e0;
+    line-height: 1.5;
+}
+
+
+/* -------------------------------------------
+-------------- Start Main Image --------------
+------------------------------------------- */
+.Banner{
+    background: linear-gradient(100deg, #000, transparent),
+                url(../images/MainImage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Banner .mainHeading{
+    position: relative;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.Banner .mainparagraph{
+    border-top: 1px solid #777571;
+    display: inline;
+}
+/* End Main Image */
+
+
+
+/* -----------------------------------------
+------------ Start Section Menu ------------
+----------------------------------------- */
+.Section-Menu{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.Section-Menu .row{
+    margin: 0;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.Section-Menu .nav-link{
+    color: #707070;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Section-Menu a{
+    position: relative;
+}
+
+.Section-Menu a.MenuBorder::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.150rem;
+    left: 0;
+    bottom: -3%;
+    background: #1e8ccc;
+    cursor: pointer;
+}
+
+.Section-Menu a.MenuBorder2::after{
+    transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.Section-Menu a.MenuBorder2:hover::after{
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+}
+
+.Section-Menu a:hover{
+    color: #1e8ccc;
+}
+
+.Section-Menu a.active1{
+    color: #0a527b;
+    border-bottom: 2px solid #0a527b;
+}
+/* End Section Menu */
+
+
+/* -----------------------------------------
+------------ Start Section One ------------
+----------------------------------------- */
+.section-heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section1{
+    padding: 0px 0 50px 0;
+    position: relative;
+}
+
+.section1::after{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 0.100rem;
+    left: 5%;
+    bottom: 0;
+    background: #777571;
+}
+
+.section1 p{
+    font-weight: 400;
+    color: #707070;
+}
+
+.section1 p span{
+    width: 120px;
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .section1 p span {
+        width: 100%;
+    }
+}
+
+.section1 p strong{
+    font-weight: 500;
+    color: #000000;
+    padding-left: 15px;
+}
+/* End Section One */
+
+
+
+/* -----------------------------------------
+------------ Start Section Two ------------
+----------------------------------------- */
+.timeline {
+    border-left: 3px solid #d6d6d6;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    letter-spacing: 0.2px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    list-style: none;
+    text-align: left;
+}
+
+.timeline a{
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
+}
+
+.timeline h2,
+.timeline h3 {
+    font-weight: 300;
+}
+
+.timeline .event {
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.timeline .event h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #0a527b;
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .event::before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event::before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event::after {
+    left: -37.8px;
+    background: #a3a3a3;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 13px;
+}
+
+.timeline .event.active::before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+.timeline .event.active::after {
+    box-shadow: inset 0 0 0 0.5em #0a405f;
+    border: 1px solid #0a405f;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 0.5em #e2e0e0;
+    height: 25px;
+    width: 25px;
+    background: #0a527b;
+    top: -5px;
+    left: -45px;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-button{
+    box-shadow: none;
+    border: none;
+}
+
+.timeline .active h1{
+    font-size: 50px;
+}
+
+.timeline .active i{
+    display: none;
+}
+
+.timeline .endevent::after {
+    top: 30px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event::after {
+        left: -30.8px;
+    }
+
+    .timeline .startevent::after {
+        top: -27px;
+        left: -39px;
+    }
+
+    .timeline .endevent::after {
+        top: 60px;
+    }
+}
+
+.rtl .timeline {
+    border-left: 0;
+    text-align: right;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 3px solid #727cf5;
+}
+
+.rtl .timeline .event::before {
+    left: 0;
+    right: -170px;
+}
+
+.rtl .timeline .event::after {
+    left: 0;
+    right: -55.8px;
+}
+
+.section2{
+    padding: 0px 0 50px 0;
+    position: relative;
+}
+
+.section2::after{
+    content: '';
+    position: absolute;
+    width: 85%;
+    height: 0.100rem;
+    left: 5%;
+    bottom: 0;
+    background: #777571;
+}
+/* End Section Two */
+
+
+
+
+
+
+/* ------------------------------------------
+------------ Start Section Three ------------
+------------------------------------------ */
+.section3 .section-heading{
+    text-align: center;
+}
+
+html,body {
+    position: relative;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide{
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2, .mySwiper3 {
+    height: 450px;
+    width: 100%;
+}
+
+.mySwiper, .mySwiper5 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide, .mySwiper5 .swiper-slide{
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active, .mySwiper5 .swiper-slide-thumb-active{
+    opacity: 1;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.section3{
+    padding: 0px 0 50px 0;
+    position: relative;
+}
+/* End Section Three */
+
+
+
+
+/* ------------------------------------------
+------------ Start Footer ------------
+------------------------------------------ */
+footer{
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+}
+
+footer a{
+    color: #fff;
+    margin-left: 30px;
+}
+
+footer a:hover{
+    color: #0a527b;
+    margin-left: 30px;
+}
+/* End Footer */
